@@ -33,4 +33,4 @@ def tcca(input_img, hemi, res_check = True, dim_check = True):
 # Volume-to-surface mapping
 All the human brain atlases used in the study were available in 3D NIFTI data format. They had to be converted into 2D GIFTI data format for further analysis of DSC between the atlases. This was achieved using Human Connectome Project based ribbon mapping method with workbench commands. The mapping was performed by projecting the individual volumetric areas on to a midthickness brain surface with a Conte69_32k_fs_LR mesh with trilinear interpolation.
 * Syntax:
-          wb_command -volume-to-surface-mapping <Volume> <Surface mesh> <Out> [-trilinear]
+          wb_command -volume-to-surface-mapping Volume Surface_mesh Output [-trilinear]
