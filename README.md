@@ -1,5 +1,5 @@
 # TCCA
-Atlases, input NIFTI images and the extent of Overlap between them.
+Brain Atlases, input NIFTI images and the extent of Overlap between them.
 
 # Preprocessing in FSL
 * 1mm3 NIFTI formatted atlas files in MNI reference space. Using fsl tools (FSL commands in shell) to prepare the data for processing.
