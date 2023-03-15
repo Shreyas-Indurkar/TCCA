@@ -167,7 +167,7 @@ def tcca(input_img, hemi, res_check = True, dim_check = True, mni_check = False)
                 max_file = os.path.join(ref_dir+ left[max_idx])
                 display.add_contours(input_img, filled=True, colors='b')
                 display.add_contours(max_file, filled=False, colors='r')
-                plt.savefig(input_dir+'max_overlap_plot.png')
+                plt.savefig(input_dir+atlas_folder+'_max_overlap_plot.png')
                 c = canvas.Canvas(input_dir+"example.pdf", pagesize=letter)
                 c.drawImage(input_dir+'max_overlap_plot.png', 50, 525, width=450, height=200)
                 c.drawString(50, 750, str(output_text))
@@ -175,7 +175,7 @@ def tcca(input_img, hemi, res_check = True, dim_check = True, mni_check = False)
         c.save()
         return Dice_dict, output_text
 
-    # For left hemisphere
+    # For right hemisphere
     if hemi == 'right':
         Dice_dict = {}
         output_text = []
@@ -303,7 +303,7 @@ def tcca(input_img, hemi, res_check = True, dim_check = True, mni_check = False)
                 max_file = os.path.join(ref_dir+ left[max_idx])
                 display.add_contours(input_img, filled=True, colors='b')
                 display.add_contours(max_file, filled=False, colors='r')
-                plt.savefig(input_dir+'max_overlap_plot.png')
+                plt.savefig(input_dir+atlas_folder+'_max_overlap_plot.png')
                 c = canvas.Canvas(input_dir+"example.pdf", pagesize=letter)
                 c.drawImage(input_dir+'max_overlap_plot.png', 50, 525, width=450, height=200)
                 c.drawString(50, 750, str(output_text))
