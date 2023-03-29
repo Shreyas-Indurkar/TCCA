@@ -28,7 +28,7 @@ def tcca(input_img, hemi, res_check = True, dim_check = True):
     dim_check : True. Checks for the dimensions of the input image with respect to the dimensions of the atlases
     
     Output:
-    Dice_dict : A python dictionary data structure. It contains the data regarding the maximum overlapping region for the input image in each atlas and                     their corresponding dice coefficient.
+    Dice_dict : A python dictionary data structure. It contains the data regarding the maximum overlapping region for the input image in each atlas and  their corresponding dice coefficient.
     
 # Volume-to-surface mapping
 All the human brain atlases used in the study were available in 3D NIFTI data format. They had to be converted into 2D GIFTI data format for further analysis of DSC between the atlases. This was achieved using Human Connectome Project based ribbon mapping method with workbench commands. The mapping was performed by projecting the individual volumetric areas on to a midthickness brain surface with a Conte69_32k_fs_LR mesh with trilinear interpolation.
