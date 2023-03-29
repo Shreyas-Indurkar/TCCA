@@ -124,40 +124,6 @@ def tcca(input_img, hemi, res_check = True, dim_check = True, mni_check = False)
                 #Saving the output to a dictionary
                 Dice_dict[max_dice] = atlas_folder + ": " + str(labels[max_idx])
 
-                #Analysis
-                non_zero_dice = Dice_list[Dice_list!=0]
-
-                #Plot a histogram and print the frequency and the edges of the histogram#
-                hist, bin_edges = np.histogram(non_zero_dice)
-                #print('histogram: ',hist)
-                #print('Edges:', bin_edges)
-
-                #Compute the mean value of dice coefficients with only non-zero values#
-                #mean_dice = non_zero_dice.mean()
-                #avg_dice = print('Mean: ',mean_dice)
-
-                #Compute the standard deviation of dice coefficients#
-                #std_dice = non_zero_dice.std()
-                #std_dev_dice = print('Std_dev: ', std_dice)
-
-                #Find the minimum and maximum values of dice coefficient from the array and determine their indices#
-                #min_dice = non_zero_dice.min()
-                #minimum = print('Min: ',min_dice)
-                #max_dice = non_zero_dice.max()
-                #print('Max: ',max_dice)
-                #max_index = np.where(Dice_list == max_dice)
-                #idx_max = print('Max_index: ',max_index)
-                #min_index = np.where(Dice_list == min_dice)
-                #idx_min = print('Min_index: ',min_index)
-
-                #Plot the histogram#
-                plt.hist(non_zero_dice)
-                plt.axvline(0.1, color='r')
-                plt.xlabel('Dice Coefficient')
-                plt.ylabel('Frequency')
-
-                plt.show()
-
                 output_text.append("Maximum Overlap of " + str(max_dice) + " at " + str(labels[max_idx]) + " in " + atlas_folder)
                 #print(output)
 
@@ -259,40 +225,6 @@ def tcca(input_img, hemi, res_check = True, dim_check = True, mni_check = False)
                 
                 #Saving the output to a dictionary
                 Dice_dict[max_dice] = atlas_folder + ": " + str(labels[max_idx])
-
-                #Analysis
-                non_zero_dice = Dice_list[Dice_list!=0]
-
-                #Plot a histogram and print the frequency and the edges of the histogram#
-                hist, bin_edges = np.histogram(non_zero_dice)
-                #print('histogram: ',hist)
-                #print('Edges:', bin_edges)
-
-                #Compute the mean value of dice coefficients with only non-zero values#
-                #mean_dice = non_zero_dice.mean()
-                #avg_dice = print('Mean: ',mean_dice)
-
-                #Compute the standard deviation of dice coefficients#
-                #std_dice = non_zero_dice.std()
-                #std_dev_dice = print('Std_dev: ', std_dice)
-
-                #Find the minimum and maximum values of dice coefficient from the array and determine their indices#
-                #min_dice = non_zero_dice.min()
-                #minimum = print('Min: ',min_dice)
-                #max_dice = non_zero_dice.max()
-                #print('Max: ',max_dice)
-                #max_index = np.where(Dice_list == max_dice)
-                #idx_max = print('Max_index: ',max_index)
-                #min_index = np.where(Dice_list == min_dice)
-                #idx_min = print('Min_index: ',min_index)
-
-                #Plot the histogram#
-                plt.hist(non_zero_dice)
-                plt.axvline(0.1, color='r')
-                plt.xlabel('Dice Coefficient')
-                plt.ylabel('Frequency')
-
-                plt.show()
 
                 output_text.append("Maximum Overlap of " + str(max_dice) + " at " + str(labels[max_idx]) + " in " + atlas_folder)
                 #print(output)
